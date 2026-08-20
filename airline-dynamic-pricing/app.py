@@ -194,6 +194,17 @@ T = {
 
 st.set_page_config(page_title="항공권 가격 예측 / Price Prediction", page_icon="✈️", layout="wide")
 
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            width: 260px !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 lang_choice = st.sidebar.selectbox("🌐 Language / 언어", ["한국어", "English"])
 lang = "ko" if lang_choice == "한국어" else "en"
 
