@@ -74,6 +74,7 @@ T = {
         "err_no_model": "모델 파일이 없습니다. `{name}`을 이 폴더({parent})에 넣어주세요.",
         "err_no_data": "DB에 데이터가 없습니다. build_db.py가 정상적으로 실행됐는지 확인해주세요.",
         "sidebar_header": "입력",
+        "sidebar_synthetic_notice": "공개용 프로토타입이라 합성 데이터를 사용합니다",
         "target_airline_label": "타겟 항공사 (본인 항공사)",
         "flight_date_label": "타겟 날짜 (출발일)",
         "reference_airlines_label": "레퍼런스 항공사 (비교하고 싶은 경쟁 항공사)",
@@ -135,6 +136,7 @@ T = {
         "err_no_model": "Model file not found. Please place `{name}` in this folder ({parent}).",
         "err_no_data": "No data in the DB. Please check that build_db.py ran successfully.",
         "sidebar_header": "Input",
+        "sidebar_synthetic_notice": "This is a public prototype, so it uses synthetic data",
         "target_airline_label": "Target airline (your airline)",
         "flight_date_label": "Target date (departure)",
         "reference_airlines_label": "Reference airlines (competitors to compare)",
@@ -253,6 +255,10 @@ if not flight_dates:
 
 with st.sidebar:
     st.header(t("sidebar_header"))
+    st.markdown(
+        f'<div style="font-size:11px; color:#898781; margin-top:-8px; margin-bottom:12px;">{t("sidebar_synthetic_notice")}</div>',
+        unsafe_allow_html=True,
+    )
     target_airline = st.selectbox(t("target_airline_label"), features.AIRLINES)
     flight_date = st.selectbox(
         t("flight_date_label"), flight_dates, format_func=lambda d: format_date(d, lang)
