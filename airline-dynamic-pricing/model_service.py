@@ -1,10 +1,3 @@
-"""
-모델 로딩 & 예측 래퍼.
-
-앱이 켜질 때 딱 한 번만 pkl을 로드해서 재사용합니다.
-(요청마다 joblib.load를 부르면 매번 100MB짜리 파일을 다시 읽어서 느려집니다.)
-"""
-
 from functools import lru_cache
 from pathlib import Path
 

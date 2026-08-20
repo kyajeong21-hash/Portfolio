@@ -1,27 +1,3 @@
-"""
-항공권 가격 예측 프로토타입 UI (이력서/포트폴리오 공개용). / Airline dynamic price
-prediction prototype UI (public resume/portfolio deployment).
-
-⚠️ 이 저장소는 (별도 private 저장소에 있는) product_prototype의 공개 배포용
-사본입니다. 저장소가 public이라, DB뿐 아니라 모델(Final_Model.pkl)까지 실제
-회사 데이터와 무관한 합성(무작위 생성) 데이터로 새로 만들었습니다
-(build_synthetic_db.py, train_synthetic_model.py 참고). 이 저장소 안에는
-실제 데이터의 흔적이 전혀 없습니다.
-
-이 모델은 1-period-ahead (원 피리어드 어헤드) 모델입니다:
-"오늘까지" 나온 가격으로 "내일" 가격만 예측할 수 있습니다.
-
-용어:
-- 타겟 항공사: 사용자 자신의 항공사 (가격을 예측하고 싶은 대상)
-- 레퍼런스 항공사: 비교/참고하고 싶은 다른 항공사들 (그래프 표시용 선택.
-  모델 자체는 항상 6개 항공사 전체의 전날 가격을 입력으로 쓰기 때문에,
-  레퍼런스 선택은 예측값 자체에는 영향을 주지 않고 "그래프에 뭘 같이 보여줄지"만 결정합니다.)
-
-실행 방법:
-    python build_synthetic_db.py   # 최초 1회: 합성 flight_price.db 생성
-    streamlit run app.py
-"""
-
 from pathlib import Path
 
 import altair as alt
@@ -151,7 +127,6 @@ T = {
         "tooltip_forecast_price": "예측가",
         "col_airline": "항공사",
         "chart_hint": "🔍 드래그/스크롤로 확대·축소할 수 있고, 점에 마우스를 올리면 세부 정보가 표시됩니다",
-        "synthetic_data_notice": "⚠️ 이 데모는 실제 데이터가 아닌 **무작위로 생성한 합성 데이터로 학습·구동**됩니다 (DB와 모델 모두). 모델 구조/로직 시연용입니다.",
     },
     "en": {
         "app_title": "✈️ Airline Dynamic Price Prediction (Prototype)",
@@ -214,7 +189,6 @@ T = {
         "tooltip_forecast_price": "Predicted price",
         "col_airline": "Airline",
         "chart_hint": "🔍 Drag/scroll to zoom, hover over a point for details",
-        "synthetic_data_notice": "⚠️ This demo is trained and run entirely on **randomly generated synthetic data** (both the DB and the model), not real data. It's meant to showcase the architecture and app logic only.",
     },
 }
 
@@ -251,7 +225,6 @@ def date_tooltip():
 
 st.header(t("app_title"))
 st.caption(t("app_subtitle"))
-st.info(t("synthetic_data_notice"))
 
 if not DB_PATH.exists():
     st.error(t("err_no_db"))

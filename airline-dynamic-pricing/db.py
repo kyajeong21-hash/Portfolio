@@ -1,12 +1,3 @@
-"""
-DB 접근 레이어.
-
-지금은 SQLite(flight_price.db)를 읽지만, 나중에 진짜 DB로 바꿀 때는
-이 파일의 get_connection()과 SQL 문법만 손보면 됩니다.
-(pandas의 pd.read_sql은 SQLite든 MySQL/PostgreSQL이든 커넥션 객체만 맞으면
- 동일하게 동작합니다.)
-"""
-
 import sqlite3
 from pathlib import Path
 

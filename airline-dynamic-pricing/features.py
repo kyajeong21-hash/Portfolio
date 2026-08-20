@@ -1,14 +1,3 @@
-"""
-모델 입력(feature row)을 만드는 모듈.
-
-Final_Model_notebook.ipynb에서 학습에 사용한 feature_cols와
-정확히 같은 순서/이름으로 만들어야 모델이 정상 동작합니다:
-
-    ["airline", "days_before_departure"]
-    + [f"prev_price_{a}" for a in AIRLINES]
-    + [f"prev_share_{a}" for a in AIRLINES]
-"""
-
 from dataclasses import dataclass, field
 
 import pandas as pd

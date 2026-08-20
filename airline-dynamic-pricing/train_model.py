@@ -1,18 +1,3 @@
-"""
-합성 데이터(flight_price.db)로 Final_Model을 재학습하는 스크립트.
-
-원본 Final_Model_notebook.ipynb와 동일한 피처 엔지니어링/모델 구조(RandomForest,
-n_estimators=300, max_depth=12, 동일 feature_cols)를 쓰되, 소스를
-(wide-format 엑셀이 아니라) 이미 long-format인 합성 flight_price.db로 바꿨습니다.
-
-실제 회사 데이터는 전혀 쓰지 않으므로, 이 스크립트로 만든 모델과 이 저장소는
-통째로 public이어도 안전합니다.
-
-실행 방법:
-    python build_synthetic_db.py     # 최초 1회: 합성 DB 생성
-    python train_synthetic_model.py  # 합성 데이터로 모델 재학습 -> Final_Model.pkl 덮어씀
-"""
-
 import sqlite3
 from pathlib import Path
 
@@ -30,7 +15,7 @@ DB_PATH = BASE_DIR / "flight_price.db"
 MODEL_PATH = BASE_DIR / "Final_Model.pkl"
 
 AIRLINES = ["KE", "OZ", "7C", "TW", "LJ", "TG"]
-# 노트북과 동일한 값 (feature_importance가 0이라 실제 예측엔 영향 없음, 형식만 맞춤)
+# feature_importance가 0이라 실제 예측엔 영향 없음, 입력 형식만 맞춤
 MARKET_SHARE = {"KE": 0.20, "OZ": 0.19, "7C": 0.16, "TW": 0.16, "LJ": 0.15, "TG": 0.14}
 
 
