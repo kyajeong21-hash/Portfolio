@@ -75,6 +75,7 @@ T = {
         "err_no_data": "DB에 데이터가 없습니다. build_db.py가 정상적으로 실행됐는지 확인해주세요.",
         "sidebar_header": "입력",
         "sidebar_synthetic_notice": "공개용 프로토타입이라 합성 데이터를 사용합니다",
+        "original_model_perf": "원본 모델 테스트 성능: 결정계수(R²) 92.37%, 평균 RMSE 43,318원",
         "target_airline_label": "타겟 항공사 (본인 항공사)",
         "flight_date_label": "타겟 날짜 (출발일)",
         "reference_airlines_label": "레퍼런스 항공사 (비교하고 싶은 경쟁 항공사)",
@@ -137,6 +138,7 @@ T = {
         "err_no_data": "No data in the DB. Please check that build_db.py ran successfully.",
         "sidebar_header": "Input",
         "sidebar_synthetic_notice": "This is a public prototype, so it uses synthetic data",
+        "original_model_perf": "Original model test performance: R² 92.37%, average RMSE ₩43,318",
         "target_airline_label": "Target airline (your airline)",
         "flight_date_label": "Target date (departure)",
         "reference_airlines_label": "Reference airlines (competitors to compare)",
@@ -237,9 +239,10 @@ def date_tooltip():
 
 
 st.header(t("app_title"))
-st.caption(t("app_subtitle"))
 st.markdown(
-    f'<div style="font-size:11px; color:#898781; margin-top:-8px; margin-bottom:12px;">{t("sidebar_synthetic_notice")}</div>',
+    f'<div style="font-size:14px; color:#808495; line-height:1.5; margin-bottom:12px;">'
+    f'{t("app_subtitle")}<br>{t("sidebar_synthetic_notice")}<br>{t("original_model_perf")}'
+    f"</div>",
     unsafe_allow_html=True,
 )
 
