@@ -207,7 +207,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-lang_choice = st.sidebar.selectbox("🌐 Language / 언어", ["한국어", "English"])
+lang_choice = st.sidebar.selectbox("🌐 Language / 언어", ["English", "한국어"])
 lang = "ko" if lang_choice == "한국어" else "en"
 
 
