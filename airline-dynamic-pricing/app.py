@@ -238,6 +238,10 @@ def date_tooltip():
 
 st.header(t("app_title"))
 st.caption(t("app_subtitle"))
+st.markdown(
+    f'<div style="font-size:11px; color:#898781; margin-top:-8px; margin-bottom:12px;">{t("sidebar_synthetic_notice")}</div>',
+    unsafe_allow_html=True,
+)
 
 if not DB_PATH.exists():
     st.error(t("err_no_db"))
@@ -255,10 +259,6 @@ if not flight_dates:
 
 with st.sidebar:
     st.header(t("sidebar_header"))
-    st.markdown(
-        f'<div style="font-size:11px; color:#898781; margin-top:-8px; margin-bottom:12px;">{t("sidebar_synthetic_notice")}</div>',
-        unsafe_allow_html=True,
-    )
     target_airline = st.selectbox(t("target_airline_label"), features.AIRLINES)
     flight_date = st.selectbox(
         t("flight_date_label"), flight_dates, format_func=lambda d: format_date(d, lang)
