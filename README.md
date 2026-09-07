@@ -2,12 +2,15 @@
 
 > A time-series machine learning project predicting next-day ticket prices (One-period ahead) using market seat supply ratios and historical pricing data.
 
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
+
 ---
 
 ## 📌 Project Overview
 
 Airline ticket prices fluctuate significantly based on departure dates, booking windows, competitor pricing, and market seat availability. This project implements a **Random Forest Regressor incorporating market seat supply ratio assumptions** to forecast next-day ticket prices and visualizes price trends via an interactive web interface.
 
+* **Live Demo**: [https://portfolio-flight-ticket-price-forecasting.streamlit.app/](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
 * **Deployment**: Streamlit Dashboard
 
 ---
