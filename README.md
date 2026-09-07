@@ -11,13 +11,10 @@
 Airline ticket prices fluctuate significantly based on departure dates, booking windows, competitor pricing, and market seat availability. This project implements a **Random Forest Regressor incorporating market seat supply ratio assumptions** to forecast next-day ticket prices and visualizes price trends via an interactive web interface.
 
 ## 📌 Dashboard Preview
-
-* **Live Demo**: [https://portfolio-flight-ticket-price-forecasting.streamlit.app/](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
-* **Deployment**: Streamlit Dashboard
-
-[![Dashboard Preview](<img width="2880" height="1519" alt="스크린샷 2026-09-07 235811" src="https://github.com/user-attachments/assets/6b860c7d-d4c9-452d-b0df-21625e3561f6" />
-)](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
+[![Dashboard Preview](<img width="2880" height="1519" alt="Screen" src="https://github.com/user-attachments/assets/ea140781-2430-4fce-8b13-82aa53d60246" />)](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
 *Click the image above to visit the Live Demo.*
+
+* **Deployment**: Streamlit Dashboard
 
 ## 🛠 Tech Stack
 
