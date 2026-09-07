@@ -15,7 +15,7 @@ Airline ticket prices fluctuate significantly based on departure dates, booking 
 * **Live Demo**: [https://portfolio-flight-ticket-price-forecasting.streamlit.app/](https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
 * **Deployment**: Streamlit Dashboard
 
-[![Dashboard Preview]<img width="2880" height="1519" alt="스크린샷 2026-09-07 235811" src="https://github.com/user-attachments/assets/bdabc16f-7ce9-4d8e-bd2d-3d0ea4869002" />
+[![Dashboard Preview]<img width="2880" height="1519" alt="스크린샷 2026-09-07 235811" src="https://github.com/user-attachments/assets/bdabc16f-7ce9-4d8e-bd2d-3d0ea4869002" />(https://portfolio-flight-ticket-price-forecasting.streamlit.app/)
 *Click the image above to visit the Live Demo.*
 
 ## 🛠 Tech Stack
